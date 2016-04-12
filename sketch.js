@@ -4,7 +4,7 @@
 var cnv;
 var capture;
 var curr_img_pyr, prev_img_pyr, point_count, point_status, prev_xy, curr_xy;
-var w = 200, h = 100;
+var w = 640, h = 480;
 
 function setup() {
   capture = createCapture(VIDEO);
