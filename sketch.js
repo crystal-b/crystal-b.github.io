@@ -42,6 +42,7 @@ function prune_oflow_points() {
           }
           ellipse(curr_xy[j<<1], curr_xy[(j<<1)+1], 8, 8);
           image(img, (curr_xy+(width/2))[j<<1], (curr_xy+(height/2))[(j<<1)+1], img.width/4, img.height/4);
+          tint(255, 127); 
           console.log(img);
           ++j;
 
