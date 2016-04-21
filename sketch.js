@@ -17,6 +17,7 @@ function setup() {
     curr_xy[point_count<<1] = mouseX;
     curr_xy[(point_count<<1)+1] = mouseY;
     point_count++;
+    timer1();
   })
 
   curr_img_pyr = new jsfeat.pyramid_t(3);
@@ -44,17 +45,18 @@ function prune_oflow_points() {
           var x = curr_xy[j<<1];
           var y = curr_xy[(j<<1)+1];
           ellipse(x, y, 8, 8);
-          image(img, (x-img.width/2, y+img.height/2+waterRise, img.width/1, img.height/1));
+          // image(img, (x-img.width/2, y+img.height/2+waterRise, img.width/1, img.height/1));
           //kyle's edits end
           // tint(255, 127);
           console.log("mouse position x: " + x); 
           console.log("mouse position y: " + y); 
-          console.log("image x: " + img.x);
-          console.log("image y: " + img.y);
+          // console.log("image x: " + img.x);
+          // console.log("image y: " + img.y);
           ++j;
       }
   }
   point_count = j;
+  return x;
 }
 
 function draw() {
@@ -85,3 +87,4 @@ function draw() {
     prune_oflow_points();
   }
 }
+
