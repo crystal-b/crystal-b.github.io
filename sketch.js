@@ -6,7 +6,7 @@ var capture;
 var curr_img_pyr, prev_img_pyr, point_count, point_status, prev_xy, curr_xy;
 var w = 640, h = 480;
 var x;
-var time = 1000000;
+var time = 1000;
 
 
 $(document).ready(function() {
