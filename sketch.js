@@ -5,6 +5,7 @@ var cnv;
 var capture;
 var curr_img_pyr, prev_img_pyr, point_count, point_status, prev_xy, curr_xy;
 var w = 640, h = 480;
+var x;
 var time = x;
 
 function setup() {
@@ -43,7 +44,7 @@ function prune_oflow_points() {
               curr_xy[(j<<1)+1] = curr_xy[(i<<1)+1];
           }
           //kyle's edits start
-          var x = curr_xy[j<<1];
+          x = curr_xy[j<<1];
           var y = curr_xy[(j<<1)+1];
           ellipse(x, y, 8, 8);
           // image(img, (x-img.width/2, y+img.height/2+waterRise, img.width/1, img.height/1));
