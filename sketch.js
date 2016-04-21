@@ -27,7 +27,6 @@ function setup() {
     curr_xy[point_count<<1] = mouseX;
     curr_xy[(point_count<<1)+1] = mouseY;
     point_count++;
-    timer1();
   })
 
   curr_img_pyr = new jsfeat.pyramid_t(3);
@@ -95,6 +94,7 @@ function draw() {
       point_status,
       epsilon, minEigen);
     prune_oflow_points();
+    timer1();
   }
 }
 
