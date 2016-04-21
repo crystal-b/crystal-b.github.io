@@ -95,7 +95,7 @@ function draw() {
       epsilon, minEigen);
     prune_oflow_points();
   }
-  if(mousePressed() === true) {
+  if(x > w/2) {
     timer1();
   }
 }
