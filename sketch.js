@@ -40,11 +40,15 @@ function prune_oflow_points() {
               curr_xy[j<<1] = curr_xy[i<<1];
               curr_xy[(j<<1)+1] = curr_xy[(i<<1)+1];
           }
-          ellipse(curr_xy[j<<1], curr_xy[(j<<1)+1], 8, 8);
-          image(img, (curr_xy+(width/2))[j<<1], (curr_xy+(100))[(j<<1)+1], img.width/1, img.height/1);
+          //kyle's edits start
+          var x = curr_xy[j<<1];
+          var y = curr_xy[(j<<1)+1];
+          ellipse(x, y, 8, 8);
+          image(img, (x-img.width/2, y+img.height/2+waterRise, img.width/1, img.height/1));
+          //kyle's edits end
           // tint(255, 127);
-          console.log("mouse position x: " + curr_xy); 
-          console.log("mouse position y: " + curr_xy); 
+          console.log("mouse position x: " + x); 
+          console.log("mouse position y: " + y); 
           console.log("image x: " + img.x);
           console.log("image y: " + img.y);
           ++j;
