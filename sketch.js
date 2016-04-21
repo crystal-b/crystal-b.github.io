@@ -94,6 +94,8 @@ function draw() {
       point_status,
       epsilon, minEigen);
     prune_oflow_points();
+  }
+  if(mousePressed()) {
     timer1();
   }
 }
