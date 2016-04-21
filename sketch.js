@@ -50,8 +50,8 @@ function prune_oflow_points() {
           // image(img, (x-img.width/2, y+img.height/2+waterRise, img.width/1, img.height/1));
           //kyle's edits end
           // tint(255, 127);
-          console.log("mouse position x: " + x); 
-          console.log("mouse position y: " + y); 
+          // console.log("mouse position x: " + x); 
+          // console.log("mouse position y: " + y); 
           // console.log("image x: " + img.x);
           // console.log("image y: " + img.y);
           ++j;
