@@ -69,7 +69,7 @@ function prune_oflow_points() {
 }
 
 function draw() {
-  image(capture, (w/2) * -1, 0, w, h);
+  image(capture, (w/4) * -1, 0, w, h);
   capture.loadPixels();
   if(capture.pixels.length > 0) { // don't forget this!
     var _pt_xy = prev_xy;
