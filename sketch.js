@@ -10,7 +10,7 @@ var time = 1000;
 
 
 $(document).ready(function() {
-  console.log("start story");
+  console.log("thesis video");
 
 });
 
