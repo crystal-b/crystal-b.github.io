@@ -21,7 +21,8 @@ function setup() {
   cnv = createCanvas(w, h);
   capture.size(w, h);
   capture.hide();
-  img = loadImage("testWater.png");
+  // img = loadImage("testWater.png");
+  img = loadVideo("water.mov");
   
   cnv.mousePressed(function() {
     curr_xy[point_count<<1] = mouseX;
@@ -54,6 +55,8 @@ function prune_oflow_points() {
           x = curr_xy[j<<1];
           var y = curr_xy[(j<<1)+1];
           ellipse(x, y, 8, 8);
+          video(img, (x-img.width/2, y+img.height/2, img.width/1, img.height/1));
+
           // image(img, (x-img.width/2, y+img.height/2+waterRise, img.width/1, img.height/1));
           //kyle's edits end
           // tint(255, 127);
