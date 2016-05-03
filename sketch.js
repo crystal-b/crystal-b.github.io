@@ -21,8 +21,8 @@ function setup() {
   cnv = createCanvas(w, h);
   capture.size(w, h);
   capture.hide();
-  // img = loadImage("testWater.png");
-  img = loadVideo("water.mov");
+  img = loadImage("testWater.png");
+  // img = loadVideo("water.mov");
   
   cnv.mousePressed(function() {
     curr_xy[point_count<<1] = mouseX;
@@ -55,7 +55,8 @@ function prune_oflow_points() {
           x = curr_xy[j<<1];
           var y = curr_xy[(j<<1)+1];
           ellipse(x, y, 8, 8);
-          video(img, (x-img.width/2, y+img.height/2, img.width/1, img.height/1));
+          console.log(img);
+          image(img, (x-img.width/2, y+img.height/2, img.width, img.height));
 
           // image(img, (x-img.width/2, y+img.height/2+waterRise, img.width/1, img.height/1));
           //kyle's edits end
@@ -103,119 +104,119 @@ function draw() {
   }
 }
 
-/* ANIMATION */
+// /* ANIMATION */
 
-function one() {
-  console.log(".");
-  timer2();
-}
-function two() {
-  console.log(" .");
-  timer3();
-}
-function three() {
-  console.log("  .");
-  timer4();
-}
-function four() {
-  console.log("   .");
-  timer5();
-}
-function five() {
-  console.log("    .");
-  timer6();
-}
-function six() {
-  console.log("    .");
-  timer7();
-}
-function seven() {
-  console.log("     .");
-  timer8();
-}
-function eight() {
-  console.log("      .");
-  timer9();
-}
-function nine() {
-  console.log("       .");
-  timer10();
-}
-function ten() {
-  console.log("        .");
-}
-
-
-function timer1() {
-  setTimeout(clear1, time); 
-}
-function timer2() {
-  setTimeout(clear2, time); 
-}
-function timer3() {
-  setTimeout(clear3, time); 
-}
-function timer4() {
-  setTimeout(clear4, time); 
-}
-function timer5() {
-  setTimeout(clear5, time); 
-}
-function timer6() {
-  setTimeout(clear6, time); 
-}
-function timer7() {
-  setTimeout(clear7, time); 
-}
-function timer8() {
-  setTimeout(clear8, time); 
-}
-function timer9() {
-  setTimeout(clear9, time); 
-}
-function timer10() {
-  setTimeout(clear10, time);  
-}
+// function one() {
+//   console.log(".");
+//   timer2();
+// }
+// function two() {
+//   console.log(" .");
+//   timer3();
+// }
+// function three() {
+//   console.log("  .");
+//   timer4();
+// }
+// function four() {
+//   console.log("   .");
+//   timer5();
+// }
+// function five() {
+//   console.log("    .");
+//   timer6();
+// }
+// function six() {
+//   console.log("    .");
+//   timer7();
+// }
+// function seven() {
+//   console.log("     .");
+//   timer8();
+// }
+// function eight() {
+//   console.log("      .");
+//   timer9();
+// }
+// function nine() {
+//   console.log("       .");
+//   timer10();
+// }
+// function ten() {
+//   console.log("        .");
+// }
 
 
-function clear1() {
-  console.clear();
-  one();
-}
-function clear2() {
-  console.clear();
-  two();
-}
-function clear3() {
-  console.clear();
-  three();
-}
-function clear4() {
-  console.clear();
-  four();
-}
-function clear5() {
-  console.clear();
-  five();
-}
-function clear6() {
-  console.clear();
-  six();
-}
-function clear7() {
-  console.clear();
-  seven();
-}
-function clear8() {
-  console.clear();
-  eight();
-}
-function clear9() {
-  console.clear();
-  nine();
-}
-function clear10() {
-  console.clear();
-  ten();
-}
+// function timer1() {
+//   setTimeout(clear1, time); 
+// }
+// function timer2() {
+//   setTimeout(clear2, time); 
+// }
+// function timer3() {
+//   setTimeout(clear3, time); 
+// }
+// function timer4() {
+//   setTimeout(clear4, time); 
+// }
+// function timer5() {
+//   setTimeout(clear5, time); 
+// }
+// function timer6() {
+//   setTimeout(clear6, time); 
+// }
+// function timer7() {
+//   setTimeout(clear7, time); 
+// }
+// function timer8() {
+//   setTimeout(clear8, time); 
+// }
+// function timer9() {
+//   setTimeout(clear9, time); 
+// }
+// function timer10() {
+//   setTimeout(clear10, time);  
+// }
+
+
+// function clear1() {
+//   console.clear();
+//   one();
+// }
+// function clear2() {
+//   console.clear();
+//   two();
+// }
+// function clear3() {
+//   console.clear();
+//   three();
+// }
+// function clear4() {
+//   console.clear();
+//   four();
+// }
+// function clear5() {
+//   console.clear();
+//   five();
+// }
+// function clear6() {
+//   console.clear();
+//   six();
+// }
+// function clear7() {
+//   console.clear();
+//   seven();
+// }
+// function clear8() {
+//   console.clear();
+//   eight();
+// }
+// function clear9() {
+//   console.clear();
+//   nine();
+// }
+// function clear10() {
+//   console.clear();
+//   ten();
+// }
 
